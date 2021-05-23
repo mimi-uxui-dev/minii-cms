@@ -24,7 +24,7 @@ export const PHOTOS = () => `${ROOT}/photos` // GET ALL
 export const PHOTO = (id) => `${ROOT}/photos/${id}` // GET + id
 
 // Products
-export const PRODUCTS_LIMIT = () => `${ROOT}/products_limit` // GET ALL
+export const PRODUCTS_LIMIT = () => `${ROOT}/products/limit10` // GET ALL
 export const PRODUCTS = () => `${ROOT}/products` // GET ALL
 export const PRODUCT = (id) => `${ROOT}/products/${id}` // GET + id
 
