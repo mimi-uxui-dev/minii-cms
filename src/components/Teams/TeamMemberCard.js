@@ -7,7 +7,7 @@ import ig from '../../assets/img/Team/InstagramLogo.png'
 import tw from '../../assets/img/Team/TwitterLogo.png'
 
 function TeamMemberCard({ team }) {
-
+     console.log('yawwwwwww ', team)
      return (
           <div className='teamMemberCard'>
                <img className='profilePic' src={team.photo} alt='' />
