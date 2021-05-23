@@ -2038,7 +2038,7 @@ span.Collapsible__trigger.is-open::before {
   display: flex;
   align-items: center;
   max-width: 530px;
-  max-height: 342px;
+
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(0, 21, 94, 0.1);
   padding: 24px;
@@ -2075,8 +2075,8 @@ span.Collapsible__trigger.is-open::before {
     .blogsPageCompTitle {
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
-      line-height: 34px;
+      font-size: 18px;
+      line-height: 1.7;
       /* or 142% */
 
       color: $base-color;
@@ -2092,7 +2092,7 @@ span.Collapsible__trigger.is-open::before {
     div {
       display: flex;
       flex-direction: row;
-      margin-bottom: 32px;
+      margin-bottom: 8px;
       margin-left: unset;
       margin-right: 16px;
 
