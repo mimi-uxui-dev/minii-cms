@@ -39,7 +39,7 @@ export const SERVICES = () => `${ROOT}/services/` // GET ALL
 export const SERVICE = (id) => `${ROOT}/services/${id}` // GET + id
 
 // Slider
-export const SLIDERS = () => `${ROOT}/sliders/` // GET ALL
+export const SLIDERS = () => `${ROOT}/sliders` // GET ALL
 export const SLIDER = (id) => `${ROOT}/sliders/${id}` // GET + id
 
 // Teams
