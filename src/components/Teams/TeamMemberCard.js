@@ -12,7 +12,7 @@ function TeamMemberCard({ team }) {
           <div className='teamMemberCard'>
                <img className='profilePic' src={team.photo} alt='' />
                <p className="TeamMemberName">{cookies.get('i18next') === 'ar' ? team.name__ar : (cookies.get('i18next') == 'fr' ? team.name__fr : team.name__en)}</p>
-               <p className="TeamMemberPosition">{cookies.get('i18next') === 'ar' ? "arabiiic" : 'engliish'} </p>
+               <p className="TeamMemberPosition">{cookies.get('i18next') === 'ar' ? team.workplace__ar : team.workplace__en} </p>
                <p className="TeamMemberDesc"> {cookies.get('i18next') === 'ar' ? parse(`${team.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${team.description__fr}`) : parse(`${team.description__en}`))}   </p>
 
                <div className="teamMemberSM">
