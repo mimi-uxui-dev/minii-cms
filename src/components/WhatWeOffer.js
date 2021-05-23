@@ -30,7 +30,7 @@ function WhatWeOffer({ lang }) {
                   <div className='MainTitle'>
                         <p className='MainTitle0'>• SERVICES •</p>
                         <h1 className='MainTitle1' >What We Offer</h1>
-                        <img src={lineGreenish} alt="" />
+                        <img style={{ width: '70px' }} src={lineGreenish} alt="" />
                         <p className='MainTitle0wwo'>Lonsectetur, quis ornare sem molestie. Sed suscipit sollicitudin nullantum odio. Quisque ullamcorper.</p>
 
                   </div>
