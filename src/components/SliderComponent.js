@@ -51,7 +51,7 @@ function SliderComponent() {
 
                          :
                          <Slider className='mainSlider' style={{ width: '68%', margin: '0 auto' }} {...slider_settings}>
-                              {
+                              {/*  {
                                    sliders.map(slider =>
                                         <div key={slider.id} className="section">
                                              <img src={slider.photo} alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
@@ -64,16 +64,16 @@ function SliderComponent() {
                                              </div>
                                         </div>
                                    )
-                              }
+                              } */}
 
 
-                              {/* <div key={slider.id} className="section">
+                              <div key={slider.id} className="section">
                                    <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
 
                                    <div className='sliderTxt '>
-                                        <p className='sliderAboveHeader' >Live Healthy</p>
-                                        <p className="sliderHeader">{cookies.get('i18next') === 'ar' ? slider.title__ar : (cookies.get('i18next') == 'fr' ? slider.title__fr : slider.title__en)} </p>
-                                        <p className="sliderContent" dangerouslySetInnerHTML={{ __html: cookies.get('i18next') === 'ar' ? slider.description__ar : (cookies.get('i18next') == 'fr' ? slider.description__fr : slider.description__en) }} ></p>
+                                        <p className='sliderAboveHeader' >New this Week</p>
+                                        <p className="sliderHeader">Long Life, Healthy Style</p>
+                                        <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
                                         <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
                                    </div>
                               </div>
@@ -82,12 +82,12 @@ function SliderComponent() {
                                    <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
 
                                    <div className='sliderTxt '>
-                                        <p className='sliderAboveHeader' >{phrases[Math.floor(Math.random() * phrases.length)]}</p>
-                                        <p className="sliderHeader">{cookies.get('i18next') === 'ar' ? slider.title__ar : (cookies.get('i18next') == 'fr' ? slider.title__fr : slider.title__en)} </p>
-                                        <p className="sliderContent" dangerouslySetInnerHTML={{ __html: cookies.get('i18next') === 'ar' ? slider.description__ar : (cookies.get('i18next') == 'fr' ? slider.description__fr : slider.description__en) }} ></p>
+                                        <p className='sliderAboveHeader' >New this Week</p>
+                                        <p className="sliderHeader">Long Life, Healthy Style</p>
+                                        <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
                                         <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
                                    </div>
-                              </div> */}
+                              </div>
 
                          </Slider>
                }
