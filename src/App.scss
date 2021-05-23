@@ -500,8 +500,8 @@ p {
 }
 
 .ci_inner_containerA {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   .slick-slider.slick-initialized {
     width: 100%;
@@ -2674,8 +2674,9 @@ span.Collapsible__trigger.is-open::before {
   padding: 16px;
 
   .testimonial_containerIMG {
-    max-width: 630px;
-    max-height: 385px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -4349,8 +4350,10 @@ span.Collapsible__trigger.is-open::before {
     width: 100%;
     margin: 0 auto;
   }
+
   .ci_inner_containerA {
     display: grid;
+    grid-template-columns: 1fr;
   }
   .testimonial_container {
     display: flex;

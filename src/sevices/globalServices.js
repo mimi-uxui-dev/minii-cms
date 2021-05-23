@@ -1,6 +1,6 @@
 // const ROOT = process.env.REACT_APP_API_URL
-// export const ROOT = 'http://192.168.1.168:8000/api/v1'
-export const ROOT = 'https://light-cms.herokuapp.com/api/v1'
+export const ROOT = 'http://192.168.1.168:8000/api/v1'
+// export const ROOT = 'https://light-cms.herokuapp.com/api/v1'
 
 // Companies
 export const COMPANY_INFORMATIONS = () => `${ROOT}/companies` // GET ALL
@@ -49,7 +49,7 @@ export const TEAM = (id) => `${ROOT}/teams/${id}` // GET + id
 // Blogs
 export const BLOGS = () => `${ROOT}/blogs` // GET ALL
 export const BLOG = (id) => `${ROOT}/blogs/${id}` // GET + id
-export const BLOG_LIMIT = (id) => `${ROOT}/blogs_limit`
+export const BLOG_LIMIT = (id) => `${ROOT}/blogs/limit/4`
 export const BLOG_LAST = (id) => `${ROOT}/blogs_last`
 export const BLOG_EXCEPT = (id) => `${ROOT}/blogs_except`
 

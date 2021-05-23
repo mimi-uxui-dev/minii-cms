@@ -68,7 +68,7 @@ function SliderComponent() {
                <Slider className='mainSlider' style={{ width: '68%', margin: '0 auto' }} {...slider_settings}>
 
                     <div className="section">
-                         <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+                         <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ width: '100%', objectFit: 'cover' }} />
 
                          <div className='sliderTxt '>
                               <p className='sliderAboveHeader' >New this Week</p>
@@ -79,7 +79,7 @@ function SliderComponent() {
                     </div>
 
                     <div className="section">
-                         <img src='https://i.ibb.co/ZcvrxQv/01.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+                         <img src='https://i.ibb.co/ZcvrxQv/01.jpg' alt="" style={{ width: '100%', objectFit: 'cover' }} />
 
                          <div className='sliderTxt '>
                               <p className='sliderAboveHeader' >Healthy</p>

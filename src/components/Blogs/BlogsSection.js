@@ -21,17 +21,15 @@ function BlogsSection() {
      }, [])
 
 
-     console.log('blogs', blogs)
+     console.log('Limited Blogs', blogs)
 
      return (
           <div className='blogSectionContainer'>
                <div className='blogSectionInnerContainer'>
                     <p className='BlogSectionTitle'>Latest blog about our Services</p>
-
-                    <BlogComponent />
-                    <BlogComponent />
-                    <BlogComponent />
-                    <BlogComponent />
+                    {
+                         blogs.map(blog => <BlogComponent blog={blog} />)
+                    }
                     <Link to='/blogs' className='blogSection_seeAllPosts'> See all blog posts </Link>
                </div>
           </div>

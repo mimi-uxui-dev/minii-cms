@@ -69,7 +69,7 @@ function BlogsPageComponent({ blog }) {
                          <div><img src={clock} alt="" /><span> {moment(blog.updated_at).format('DD/MM/YYYY')}  </span> </div>
                     </div>
                     <p className='blogsPageCompPara'>
-                         {cookies.get('i18next') === 'ar' ? parse(`${blog.text__ar}`.substr(0, 200) + ' ...') : (cookies.get('i18next') == 'fr' ? parse(`${blog.text__fr}`.substr(0, 200) + ' ...') : parse(`${blog.text__en}`.substr(0, 200) + ' ...'))}
+                         {cookies.get('i18next') === 'ar' ? parse(`${blog.text__ar}`.substr(0, 150) + ' ...') : (cookies.get('i18next') == 'fr' ? parse(`${blog.text__fr}`.substr(0, 200) + ' ...') : parse(`${blog.text__en}`.substr(0, 200) + ' ...'))}
                     </p>
                </div>
           </div>
