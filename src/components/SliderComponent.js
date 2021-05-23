@@ -35,13 +35,7 @@ function SliderComponent() {
 
      }, [])
 
-     const imgs = [
-          'https://i.ibb.co/z2W7BZv/02.jpg',
-          'https://i.ibb.co/ZcvrxQv/01.jpg'
-     ]
-
      const phrases = ['Live healthy', 'New This Week', 'Green Life, Best Life']
-
 
      return (
           <div>
@@ -79,7 +73,7 @@ function SliderComponent() {
                               </div>
 
                               <div key={slider.id} className="section">
-                                   <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+                                   <img src='https://i.ibb.co/ZcvrxQv/01.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
 
                                    <div className='sliderTxt '>
                                         <p className='sliderAboveHeader' >New this Week</p>
