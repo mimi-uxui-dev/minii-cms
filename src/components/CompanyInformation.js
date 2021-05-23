@@ -7,6 +7,8 @@ import cookies from 'js-cookie'
 import spinner from '../assets/img/spinner.svg'
 import parse from 'html-react-parser'
 
+
+
 import lineGreenish from '../assets/img/Vector 5.svg'
 import quotes from '../assets/img/quotes.svg'
 import menImg from '../assets/img/CompanyInfo/men01.jpg'
