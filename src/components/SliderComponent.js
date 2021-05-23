@@ -65,27 +65,31 @@ function SliderComponent() {
                } */}
 
 
-               <div className="section">
-                    <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+               <Slider className='mainSlider' style={{ width: '68%', margin: '0 auto' }} {...slider_settings}>
 
-                    <div className='sliderTxt '>
-                         <p className='sliderAboveHeader' >New this Week</p>
-                         <p className="sliderHeader">Long Life, Healthy Style</p>
-                         <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
-                         <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
+                    <div className="section">
+                         <img src='https://i.ibb.co/T0Db7t3/02.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+
+                         <div className='sliderTxt '>
+                              <p className='sliderAboveHeader' >New this Week</p>
+                              <p className="sliderHeader">Long Life, Healthy Style</p>
+                              <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
+                              <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
+                         </div>
                     </div>
-               </div>
 
-               <div className="section">
-                    <img src='https://i.ibb.co/ZcvrxQv/01.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
+                    <div className="section">
+                         <img src='https://i.ibb.co/ZcvrxQv/01.jpg' alt="" style={{ maxWidth: '100%', width: '100%', height: '-webkit-fill-available', objectFit: 'cover' }} />
 
-                    <div className='sliderTxt '>
-                         <p className='sliderAboveHeader' >New this Week</p>
-                         <p className="sliderHeader">Long Life, Healthy Style</p>
-                         <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
-                         <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
+                         <div className='sliderTxt '>
+                              <p className='sliderAboveHeader' >Healthy</p>
+                              <p className="sliderHeader">Long Life, Healthy Style</p>
+                              <p className="sliderContent">It is a long established fact that a reader will be amazed.</p>
+                              <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
+                         </div>
                     </div>
-               </div>
+
+               </Slider>
 
 
           </div>
