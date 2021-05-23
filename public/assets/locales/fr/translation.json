@@ -1,0 +1,20 @@
+{
+     "app_title": "Titre",
+     "language": "Langue",
+     "welcome_message": "Bienvenue",
+     "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo",
+     "CI_Reach_out": "Tendre la main",
+     "CI_Contact_us": "Contactez nous",
+     "SERVICE_What_We_Offer": "Ce Que Nous Offrons?",
+     "SERVICE_desc": "FR Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.",
+     "CONTACT_get_in_touch": "Contactez-nous",
+     "CONTACT_get_in_touch_para": "FR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam.",
+     "CONTACT_PH_name": "Nom",
+     "CONTACT_PH_email": "Email",
+     "CONTACT_PH_subject": "Objet",
+     "CONTACT_PH_phone": "Téléphone",
+     "CONTACT_PH_msg": "Message",
+     "CONTACT_send": "Envoyer",
+     "PRODUCT_SEC_Title": "Produits",
+     "PRODUCT_SEC_Para": "FR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam."
+}

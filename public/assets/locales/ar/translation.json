@@ -1,0 +1,20 @@
+{
+     "app_title": "عنوان",
+     "language": "اللغة",
+     "welcome_message": "اهلا بكم",
+     "days_since_release": "لقد مرت {{number_of_days}} أيام على إصدار هذا الفيديو",
+     "CI_Reach_out": "تواصل معنا",
+     "CI_Contact_us": "اتصل بنا",
+     "SERVICE_What_We_Offer": "ماذا نقدم؟",
+     "SERVICE_desc": "AR Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.",
+     "CONTACT_get_in_touch": "تواصل معنا",
+     "CONTACT_get_in_touch_para": "AR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam.",
+     "CONTACT_PH_name": "الاسم",
+     "CONTACT_PH_email": "البريد الالكتروني",
+     "CONTACT_PH_subject": "الموضوع",
+     "CONTACT_PH_phone": "رقم الهاتف",
+     "CONTACT_PH_msg": "الرسالة",
+     "CONTACT_send": "ارسل",
+     "PRODUCT_SEC_Title": "المنتجات",
+     "PRODUCT_SEC_Para": "AR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam."
+}
