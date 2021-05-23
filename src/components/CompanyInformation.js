@@ -46,13 +46,16 @@ const CompanyInformation = ({ lang }) => {
                             </div>
 
                             <div className='ci_inner_containerA' >
-                                   <Slider {...slider_settings}>
+                                   {/* <Slider {...slider_settings}>
                                           {
                                                  companiesInfo.length == 0 ?
                                                         <img src={spinner} className='spinner' alt="" />
                                                         : companiesInfo.photo.map(c => <img key={c.id} src={c.link} alt="" style={{ maxWidth: '700px', width: '100%' }} />)
                                           }
-                                   </Slider>
+                                   </Slider> */}
+
+                                   <img src="https://i.ibb.co/khD3M7L/woman01.jpg" alt="" style={{ maxWidth: '700px', width: '100%' }} />
+
                                    <div className='ci_txt_content' >
                                           <h1 className='headerTitle' > {cookies.get('i18next') === 'ar' ? companiesInfo.name__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.name__fr : companiesInfo.name__en)} </h1>
                                           <p className='category' >  {cookies.get('i18next') === 'ar' ? companiesInfo.category__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.category__fr : companiesInfo.category__en)}  </p>
