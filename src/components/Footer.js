@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import axios from 'axios'
-import { SUBSCRIBE } from '../sevices/globalServices'
+import { SUBSCRIBE, PRODUCTS_CA } from '../sevices/globalServices'
 import { MyContextProvider, MyContext } from '../context/MyContext'
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
@@ -11,11 +11,13 @@ import gmail from '../assets/img/Footer/GoogleLogo.svg'
 import ig from '../assets/img/Footer/InstagramLogo.svg'
 import tw from '../assets/img/Footer/TwitterLogo.svg'
 import headset from '../assets/img/headset.png'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
 
      const [companiesInfo, setCompaniesInfo] = useContext(MyContext)
+     const [productsCateg, setProductsCateg] = useState([])
 
      const [formErrors, setformErrors] = useState({
           emailErr: '',
@@ -39,6 +41,17 @@ function Footer() {
           return true
      }
 
+     useEffect(async () => {
+
+          const fetchData = async () => {
+               const result = await axios.get(PRODUCTS_CA())
+                    .then(res => setCompaniesInfo(res.data.data))
+
+          }
+          fetchData()
+
+     }, [])
+
      const [email, setEmail] = useState('')
 
      const handleEmail = (e) => {
@@ -46,6 +59,7 @@ function Footer() {
           setEmail(e.target.value)
      }
 
+     console.log('categoriesssssss', productsCateg)
 
      const handleSubmit = async (e) => {
           e.preventDefault()
@@ -107,7 +121,7 @@ function Footer() {
                     <div className='footer_sec footer_sec01'>
                          <p>STORE LOCATION</p>
                          <ul>
-                              <li>{cookies.get('i18next') === 'ar' ? companiesInfo.address__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.address__fe : companiesInfo.address__en)} </li>
+                              <li>{cookies.get('i18next') === 'ar' ? companiesInfo.address__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.address__fr : companiesInfo.address__en)} </li>
                               <li><p></p></li>
                               <li>{companiesInfo.email}</li>
                          </ul>
@@ -126,11 +140,8 @@ function Footer() {
                     <div className='footer_sec'>
                          <p>CATEGORIES</p>
                          <ul>
-                              <li><a href="">Fruits & Vegetables</a></li>
-                              <li><a href="">Dairy Products</a></li>
-                              <li><a href="">Package Foods</a></li>
-                              <li><a href="">Beverage</a></li>
-                              <li><a href="">Health & Wellness</a></li>
+                              {productsCateg.map(c => <li> <Link>{cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}</Link> </li>)}
+
 
                          </ul>
                     </div>
