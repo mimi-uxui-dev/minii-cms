@@ -43,9 +43,9 @@ function BlogsPageComponent({ blog }) {
 
                     <div className='blogModalContent'>
 
-                         <img className='blogModalimg' src={blog.photo} alt="" />
+                         <img className='blogModalimg' onClick={openModal} src={blog.photo} alt="" />
 
-                         <div>
+                         <div className='blogModalTXT'>
                               <div>
                                    <p className='blogsPageCompCategory'>in<span> {blog.domaine}</span></p>
                                    <div><img src={pen} alt="" /><span> Admin </span> </div>
@@ -69,7 +69,7 @@ function BlogsPageComponent({ blog }) {
                          <div><img src={clock} alt="" /><span> {moment(blog.updated_at).format('DD/MM/YYYY')}  </span> </div>
                     </div>
                     <p className='blogsPageCompPara'>
-                         {cookies.get('i18next') === 'ar' ? parse(`${blog.text__ar}`.substr(0, 150) + ' ...') : (cookies.get('i18next') == 'fr' ? parse(`${blog.text__fr}`.substr(0, 200) + ' ...') : parse(`${blog.text__en}`.substr(0, 200) + ' ...'))}
+                         {cookies.get('i18next') === 'ar' ? parse(`${blog.text__ar}`.substr(0, 80) + ' ...') : (cookies.get('i18next') == 'fr' ? parse(`${blog.text__fr}`.substr(0, 80) + ' ...') : parse(`${blog.text__en}`.substr(0, 80) + ' ...'))}
                     </p>
                </div>
           </div>

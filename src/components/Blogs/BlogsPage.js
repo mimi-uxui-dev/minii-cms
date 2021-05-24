@@ -11,7 +11,7 @@ import CloseBtn from '../../assets/img/Products/XCircle.svg'
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
 
-import { BLOGS, BLOG_LAST } from '../../sevices/globalServices'
+import { BLOG_EXCEPT, BLOG_LAST } from '../../sevices/globalServices'
 import headerbg from '../../assets/img/breadcrumb_bkg.jpg'
 import axios from 'axios'
 import Modal from 'react-modal'
@@ -36,7 +36,7 @@ function BlogsPage() {
 
      useEffect(async () => {
           const fetchData = async () => {
-               const result = await axios.get(BLOGS())
+               const result = await axios.get(BLOG_EXCEPT())
                     .then(res => setBlogs(res.data.data))
           }
           fetchData()
@@ -75,7 +75,7 @@ function BlogsPage() {
 
                               <img className='blogModalimg' src={blogsLast.photo} alt="" />
 
-                              <div>
+                              <div className='blogModalTXT'>
                                    <div>
                                         <p className='blogsPageCompCategory'>in<span> {blogsLast.domaine}</span></p>
                                         <div><img src={pen} alt="" /><span> Admin </span> </div>
@@ -90,13 +90,13 @@ function BlogsPage() {
                          </div>
                     </Modal>
 
-                    <img src={blogsLast.photo} alt="" />
+                    <img className='blogsPageCompImg_single' src={blogsLast.photo} alt="" />
 
                     <div className='blogsPageMainCompoTxt'>
                          <p className='blogsPageCompCategory'>in<span> {blogsLast.domaine} </span></p>
                          <p className='blogsPageCompTitle' onClick={openModal}>{cookies.get('i18next') === 'ar' ? blogsLast.title__ar : (cookies.get('i18next') == 'fr' ? blogsLast.title__fr : blogsLast.title__en)}</p>
                          <p className='blogsPageCompPara'>
-                              {cookies.get('i18next') === 'ar' ? parse(`${blogsLast.text__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${blogsLast.text__fr}`) : parse(`${blogsLast.text__en}`))}
+                              {cookies.get('i18next') === 'ar' ? parse(`${blogsLast.text__ar}`.substr(0, 150) + ' ...') : (cookies.get('i18next') == 'fr' ? parse(`${blogsLast.text__fr}`.substr(0, 150) + ' ...') : parse(`${blogsLast.text__en}`.substr(0, 150) + ' ...'))}
                          </p>
                          <div className='blogsPageActions'>
                               <div><img src={pen} alt="" /><span>John Doe</span> </div>

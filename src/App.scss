@@ -2183,7 +2183,6 @@ span.Collapsible__trigger.is-open::before {
 .BlogsPageMain {
   margin-bottom: 160px;
   .BlogsPageMainTitle {
-    height: 57px;
     font-style: normal;
     font-weight: 800;
     font-size: 48px;
@@ -2204,17 +2203,31 @@ span.Collapsible__trigger.is-open::before {
     flex-direction: row;
     margin: 72px auto 72px auto;
 
-    img {
-      max-width: 634px;
-      max-height: 418px;
+    .blogsPageCompImg {
+      // max-width: 634px;
+      // max-height: 418px;
       filter: drop-shadow(0px 0px 16px rgba(0, 0, 255, 0.16));
       border-radius: 5px;
+      transition: ease 0.3s;
+      transform: scale(0.99);
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(1);
+        transition: ease 0.3s;
+        cursor: pointer;
+      }
     }
 
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: max-content;
+
       .blogsPageCompCategory {
         height: 18px;
 
@@ -2229,14 +2242,19 @@ span.Collapsible__trigger.is-open::before {
       }
 
       .blogsPageCompTitle {
-        height: 132px;
         font-style: normal;
         font-weight: 600;
-        font-size: 48px;
-        line-height: 66px;
+        font-size: 40px;
+        line-height: 1.1;
         margin-top: 8px;
         margin-bottom: 16px;
         color: $base-color;
+
+        &:hover {
+          color: $oliveGreen;
+          transition: ease 0.3s;
+          cursor: pointer;
+        }
       }
 
       .blogsPageCompPara {
@@ -2257,7 +2275,7 @@ span.Collapsible__trigger.is-open::before {
         justify-content: space-between;
         align-items: center;
 
-        width: 409px;
+        max-width: 80%;
         height: 18px;
 
         div {
@@ -2295,7 +2313,10 @@ span.Collapsible__trigger.is-open::before {
   color: $blogGrey;
 
   &:hover {
+    transition: ease 0.3s;
     text-decoration: none;
+    color: $oliveGreen !important;
+    cursor: pointer;
   }
 }
 
@@ -3089,6 +3110,12 @@ span.Collapsible__trigger.is-open::before {
 /* ****************** Media Queries *********************** */
 
 @media screen and (max-width: 1440px) {
+  .blogModalContent {
+    .blogModalTXT {
+      margin-left: 24px;
+    }
+  }
+
   .BlogsPageMain .blogsPageMainCompo {
     width: 80%;
   }
@@ -3309,10 +3336,40 @@ span.Collapsible__trigger.is-open::before {
 }
 
 @media screen and (max-width: 1024px) {
+  .blogModalContent {
+    .blogModalTXT {
+      .blogsPageCompTitle {
+        font-size: 24px;
+      }
+    }
+
+    div {
+      div {
+        max-width: 67%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+
+  .blogsPageCompContainer {
+    max-width: 450px;
+    padding: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .blogsPageCompContainer div .blogsPageCompPara {
+    width: -webkit-fill-available;
+  }
+
   .BlogsPageMain .blogsPageMainCompo div .blogsPageCompPara {
     width: fit-content;
     font-size: 14px;
     line-height: 1.7;
+    width: 90%;
   }
   .BlogsPageMain .blogsPageMainCompo {
     width: 95%;
@@ -3320,6 +3377,8 @@ span.Collapsible__trigger.is-open::before {
 
   .blogPageContainer {
     width: 95%;
+    gap: 40px 0;
+    grid-gap: 40px 0;
   }
 
   .BlogsPageMain .blogsPageMainCompo img {
@@ -3330,7 +3389,7 @@ span.Collapsible__trigger.is-open::before {
 
   .BlogsPageMain .blogsPageMainCompo div .blogsPageCompTitle {
     font-size: 32px;
-    height: 80px;
+    height: unset;
   }
 
   .faqsContainer {
@@ -3631,6 +3690,48 @@ span.Collapsible__trigger.is-open::before {
 }
 
 @media screen and (max-width: 800px) {
+  .blogModalContent {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .blogModalimg {
+      margin: 0 auto 24px auto;
+    }
+  }
+
+  .blogModalContent div div {
+    max-width: 95%;
+  }
+
+  .blogsPageCompImg_single {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .BlogsPageMain .blogsPageMainCompo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .BlogsPageMain .blogsPageMainCompo div .blogsPageCompTitle {
+    font-size: 24px;
+    height: unset;
+    line-height: 1.3;
+  }
+
+  .blogPageContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .blogsPageCompContainer {
+    max-width: initial;
+    width: 82%;
+    height: auto;
+    margin: 0 auto;
+  }
+
   .contactContainer_sideIMG {
     display: none;
   }
@@ -4171,6 +4272,68 @@ span.Collapsible__trigger.is-open::before {
 }
 
 @media screen and (max-width: 700px) {
+  .ReactModal__Content {
+    border-radius: 9px !important;
+    padding: 40px 8px 8px 8px !important;
+  }
+
+  .BlogsPageMain .blogsPageMainCompo {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .blogModalContent .blogModalimg {
+    max-width: 256px;
+    width: fit-content;
+  }
+
+  .blogModalContent div .blogsPageCompPara {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+
+  .blogModalContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 8px;
+  }
+
+  .blogModalContent .blogModalTXT {
+    margin-left: 0;
+  }
+
+  .blogModalContent .blogModalTXT .blogsPageCompTitle {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .blogModalContent div div {
+    font-size: 12px;
+  }
+
+  .blogsPageCompImg_single {
+    margin-bottom: 24px;
+  }
+
+  .blogsPageCompContainer {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .blogsPageCompContainer img {
+    max-width: unset;
+    max-height: unset;
+    transform: scale(1);
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .BlogsPageMain .blogsPageMainCompo div .blogsPageActions {
+    width: 100%;
+    max-width: 87%;
+  }
+
   .WLTHFY_container .WLTHFY_container_A h2 {
     font-size: 24px;
   }
