@@ -1,8 +1,6 @@
 {
-     "app_title": "Titre",
+     "app_title": "Sunny Garden",
      "language": "Langue",
-     "welcome_message": "Bienvenue",
-     "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo",
      "CI_Reach_out": "Tendre la main",
      "CI_Contact_us": "Contactez nous",
      "SERVICE_What_We_Offer": "Ce Que Nous Offrons?",
@@ -16,5 +14,13 @@
      "CONTACT_PH_msg": "Message",
      "CONTACT_send": "Envoyer",
      "PRODUCT_SEC_Title": "Produits",
-     "PRODUCT_SEC_Para": "FR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam."
+     "PRODUCT_SEC_Para": "FR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam.",
+     "SEARCH_BTN_LABEL": "Rechercher",
+     "SEARCH_BTN_PLACEHOLDER": "Rechercher un produit..",
+     "NAV_HOME": "Accueil",
+     "NAV_PRODUCTS": "Produits",
+     "NAV_ABOUT": "A Propos de Nous",
+     "NAV_BLOG": "Blog",
+     "NAV_FAQS": "FAQs",
+     "NAV_CONTACT": "Contact"
 }

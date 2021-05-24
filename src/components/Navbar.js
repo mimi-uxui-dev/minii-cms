@@ -23,7 +23,6 @@ function Navbar({ languages }) {
 
      const toggleOpen = () => {
           setOpenMenu(!openMenu)
-          console.log('opppen', openMenu)
      }
 
      return (
@@ -35,8 +34,8 @@ function Navbar({ languages }) {
 
                               <form className='nav_navigation_search' >
                                    <img src={search} alt="" />
-                                   <input type="text" placeholder='Search products..' />
-                                   <button type="submit">Search</button>
+                                   <input type="text" placeholder={t('SEARCH_BTN_PLACEHOLDER')} />
+                                   <button type="submit"> {t('SEARCH_BTN_LABEL')} </button>
                               </form>
 
                          </div>
@@ -85,12 +84,12 @@ function Navbar({ languages }) {
                     </div>
 
                     <div className='myNavBar_Links'>
-                         <Link to='/' >Home</Link>
-                         <Link to='/products' >Products</Link>
-                         <Link to='/about-us' >About Us</Link>
-                         <Link to='/blogs' >Blog</Link>
-                         <Link to='/faqs' >FAQs</Link>
-                         <Link to='/contact' >Contact</Link>
+                         <Link to='/' > {t('NAV_HOME')} </Link>
+                         <Link to='/products' >{t('NAV_PRODUCTS')}</Link>
+                         <Link to='/about-us' >{t('NAV_ABOUT')}</Link>
+                         <Link to='/blogs' >{t('NAV_BLOG')}</Link>
+                         <Link to='/faqs' >{t('NAV_FAQS')}</Link>
+                         <Link to='/contact' >{t('NAV_CONTACT')}</Link>
                     </div>
                </div>
 
@@ -105,17 +104,17 @@ function Navbar({ languages }) {
                          <div className='nav_navigation'>
                               <form className='nav_navigation_search' >
                                    <img src={search} alt="" />
-                                   <input type="text" placeholder='Search products..' />
-                                   <button type="submit">Search</button>
+                                   <input type="text" placeholder={t('SEARCH_BTN_PLACEHOLDER')} />
+                                   <button type="submit"> {t('SEARCH_BTN_LABEL')} </button>
                               </form>
                          </div>
                          <div className='myNavBar_Links'>
-                              <Link to='/' >Home</Link>
-                              <Link to='/products' >Products</Link>
-                              <Link to='/about-us' >About Us</Link>
-                              <Link to='/blogs' >Blog</Link>
-                              <Link to='/faqs' >FAQs</Link>
-                              <Link to='/contact' >Contact</Link>
+                              <Link to='/' > {t('NAV_HOME')} </Link>
+                              <Link to='/products' >{t('NAV_PRODUCTS')}</Link>
+                              <Link to='/about-us' >{t('NAV_ABOUT')}</Link>
+                              <Link to='/blogs' >{t('NAV_BLOG')}</Link>
+                              <Link to='/faqs' >{t('NAV_FAQS')}</Link>
+                              <Link to='/contact' >{t('NAV_CONTACT')}</Link>
                          </div>
 
                          <div className='nav_sm'>

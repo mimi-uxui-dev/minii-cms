@@ -1,8 +1,6 @@
 {
-     "app_title": "عنوان",
+     "app_title": "صاني غاردن",
      "language": "اللغة",
-     "welcome_message": "اهلا بكم",
-     "days_since_release": "لقد مرت {{number_of_days}} أيام على إصدار هذا الفيديو",
      "CI_Reach_out": "تواصل معنا",
      "CI_Contact_us": "اتصل بنا",
      "SERVICE_What_We_Offer": "ماذا نقدم؟",
@@ -16,5 +14,13 @@
      "CONTACT_PH_msg": "الرسالة",
      "CONTACT_send": "ارسل",
      "PRODUCT_SEC_Title": "المنتجات",
-     "PRODUCT_SEC_Para": "AR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam."
+     "PRODUCT_SEC_Para": "AR Mauris tempor id pharetra dui duis quam. Mauris tempor id pharetra dui duis quam.",
+     "SEARCH_BTN_LABEL": "بحث",
+     "SEARCH_BTN_PLACEHOLDER": " .. بحث عن منتج",
+     "NAV_HOME": "الصفحة الرئيسية",
+     "NAV_PRODUCTS": "منتجاتنا",
+     "NAV_ABOUT": "من نحن؟",
+     "NAV_BLOG": "مقالات",
+     "NAV_FAQS": "FAQs",
+     "NAV_CONTACT": "اتصل بنا"
 }
