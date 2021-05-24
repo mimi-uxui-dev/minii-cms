@@ -22,5 +22,17 @@
      "NAV_ABOUT": "About Us",
      "NAV_BLOG": "Blog",
      "NAV_FAQS": "FAQs",
-     "NAV_CONTACT": "Contact"
+     "SERVICE_TAG": "SERVICES",
+     "CI_TAG": "ABOUT US",
+     "CI_TITLE": "Welcome to the Organic Life",
+     "P_SEC_TAG": "DISCOVER",
+     "P_SEC_TITLE": "Fresh & Organic Products",
+     "P_SEC_Link": "All products",
+     "P_COMPO_outOfStock": "Out of Stock",
+     "P_COMPO_viewProduct": "View product",
+     "TEAMS_SEC_TAG": "MEMBERS",
+     "TEAMS_SEC_TITLE": "Meet The Team",
+     "TEAMS_SEC_DESC": "EN Prnare sem molestie. Sed suscipit sollicitudin nulla tempor congue. Integer sed elementum odio.",
+     "BLOG_SEC_TITLE": "Latest blog about our Services",
+     "BLOG_SEC_Link": "See all blog posts"
 }

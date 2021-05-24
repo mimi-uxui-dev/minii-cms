@@ -6,7 +6,7 @@ import CloseBtn from '../../assets/img/Products/XCircle.svg'
 import parse from 'html-react-parser'
 import axios from 'axios'
 import { PRODUCTS_CA } from '../../sevices/globalServices'
-
+import { useTranslation } from 'react-i18next'
 import { ROOT } from '../../sevices/globalServices'
 
 import {
@@ -47,6 +47,8 @@ const customStyles = {
 
 
 function Product({ product }) {
+     const { t } = useTranslation()
+
      const [modalIsOpen, setIsOpen] = useState(false);
      const [modalIsOpen1, setIsOpen1] = useState(false);
      const [categories, setCategories] = useState([])
@@ -167,14 +169,14 @@ function Product({ product }) {
 
                     <div>
                          {
-                              product.availability ? null : <div className="outOfStock_tag">Out of Stock</div>
+                              product.availability ? null : <div className="outOfStock_tag"> {t('P_COMPO_outOfStock')} </div>
                          }
                     </div>
 
                     <img className='ProductContainerImg' src={product.photo} alt="" />
                     <p className='ProductContainerName'>{cookies.get('i18next') === 'ar' ? product.name__ar : (cookies.get('i18next') == 'fr' ? product.name__fr : product.name__en)} </p>
                     <div className='grayLiine'></div>
-                    <p className="ProductContainerViewProduct" onClick={openModal1}>View product »</p>
+                    <p className="ProductContainerViewProduct" onClick={openModal1}>{t('P_COMPO_viewProduct')} »</p>
 
                </div>
 

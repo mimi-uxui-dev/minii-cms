@@ -22,5 +22,18 @@
      "NAV_ABOUT": "A Propos de Nous",
      "NAV_BLOG": "Blog",
      "NAV_FAQS": "FAQs",
-     "NAV_CONTACT": "Contact"
+     "NAV_CONTACT": "Contact",
+     "SERVICE_TAG": "SERVICES",
+     "CI_TAG": "A PROPOS DE NOUS",
+     "CI_TITLE": "Bienvenue dans la Vie Organique",
+     "P_SEC_TAG": "DÉCOUVRIR",
+     "P_SEC_TITLE": "Produits Frais et Organiques",
+     "P_SEC_Link": "Tous les produits",
+     "P_COMPO_outOfStock": "Rupture de Stock",
+     "P_COMPO_viewProduct": "Voir le produit",
+     "TEAMS_SEC_TAG": "MEMBRES",
+     "TEAMS_SEC_TITLE": "Rencontrer l'Équipe",
+     "TEAMS_SEC_DESC": "FR Prnare sem molestie. Sed suscipit sollicitudin nulla tempor congue. Integer sed elementum odio.",
+     "BLOG_SEC_TITLE": "Dernier blog sur nos Services",
+     "BLOG_SEC_Link": "Voir tous nos articles"
 }

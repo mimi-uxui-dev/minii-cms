@@ -36,12 +36,14 @@ const CompanyInformation = ({ lang }) => {
               arrows: false
        };
 
+       const textArabic = { textAlign: (cookies.get('i18next') === 'ar') ? "right" : "left" }
+
        return (
               <MyContextProvider>
                      <div className="ci_container">
                             <div className='MainTitle'>
-                                   <p className='MainTitle0'>• ABOUT US •</p>
-                                   <h1 className='MainTitle1' >Welcome to the Organic Life</h1>
+                                   <p className='MainTitle0'>• {t('CI_TAG')} •</p>
+                                   <h1 className='MainTitle1' > {t('CI_TITLE')} </h1>
                                    <img src={lineGreenish} alt="" />
                             </div>
 
@@ -57,7 +59,7 @@ const CompanyInformation = ({ lang }) => {
                                    <img src="https://i.ibb.co/khD3M7L/woman01.jpg" alt="" style={{ maxWidth: '700px', width: '100%' }} />
 
                                    <div className='ci_txt_content' >
-                                          <h1 className='headerTitle' > {cookies.get('i18next') === 'ar' ? companiesInfo.name__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.name__fr : companiesInfo.name__en)} </h1>
+                                          <h1 className='headerTitle' style={textArabic} > {cookies.get('i18next') === 'ar' ? companiesInfo.name__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.name__fr : companiesInfo.name__en)} </h1>
                                           <p className='category' >  {cookies.get('i18next') === 'ar' ? companiesInfo.category__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.category__fr : companiesInfo.category__en)}  </p>
                                           <p className='paragraph'  >  {cookies.get('i18next') === 'ar' ? parse(`${companiesInfo.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${companiesInfo.description__fr}`) : parse(`${companiesInfo.description__en}`))} </p>
 

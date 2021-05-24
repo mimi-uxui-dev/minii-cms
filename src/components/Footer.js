@@ -59,8 +59,6 @@ function Footer() {
           setEmail(e.target.value)
      }
 
-     console.log('categoriesssssss', productsCateg)
-
      const handleSubmit = async (e) => {
           e.preventDefault()
 

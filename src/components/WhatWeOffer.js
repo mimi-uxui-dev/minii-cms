@@ -28,10 +28,10 @@ function WhatWeOffer({ lang }) {
       return (
             <div className="wwoContainer">
                   <div className='MainTitle'>
-                        <p className='MainTitle0'>• SERVICES •</p>
-                        <h1 className='MainTitle1' >What We Offer</h1>
+                        <p className='MainTitle0'>• {t('SERVICE_TAG')} •</p>
+                        <h1 className='MainTitle1' >{t('SERVICE_What_We_Offer')}</h1>
                         <img style={{ width: '70px' }} src={lineGreenish} alt="" />
-                        <p className='MainTitle0wwo'>Lonsectetur, quis ornare sem molestie. Sed suscipit sollicitudin nullantum odio. Quisque ullamcorper.</p>
+                        <p className='MainTitle0wwo'> {t('SERVICE_desc')} </p>
 
                   </div>
 

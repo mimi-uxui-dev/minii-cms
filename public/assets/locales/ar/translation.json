@@ -22,5 +22,18 @@
      "NAV_ABOUT": "من نحن؟",
      "NAV_BLOG": "مقالات",
      "NAV_FAQS": "FAQs",
-     "NAV_CONTACT": "اتصل بنا"
+     "NAV_CONTACT": "اتصل بنا",
+     "SERVICE_TAG": "الخدمات",
+     "CI_TAG": "من نحن؟",
+     "CI_TITLE": "مرحبا بكم في الحياة العضوية",
+     "P_SEC_TAG": "اكتشف",
+     "P_SEC_TITLE": "منتجات طازجة و عضوية",
+     "P_SEC_Link": "كل المنتجات",
+     "P_COMPO_outOfStock": "نفذ من المخزون",
+     "P_COMPO_viewProduct": "عرض المنتج",
+     "TEAMS_SEC_TAG": "الفريق",
+     "TEAMS_SEC_TITLE": "تعرف على الفريق",
+     "TEAMS_SEC_DESC": "AR Prnare sem molestie. Sed suscipit sollicitudin nulla tempor congue. Integer sed elementum odio.",
+     "BLOG_SEC_TITLE": "أحدث  المقالات عن خدماتنا",
+     "BLOG_SEC_Link": "عرض كل مقالاتنا"
 }

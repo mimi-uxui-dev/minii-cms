@@ -29,6 +29,8 @@ function BlogComponent({ blog }) {
 
      const [modalIsOpen, setIsOpen] = useState(false);
 
+     const textArabic = { textAlign: (cookies.get('i18next') === 'ar') ? "right" : "left", marginRight: (cookies.get('i18next') === 'ar') ? "16px" : "0" }
+
      function openModal() {
           setIsOpen(true);
      }
@@ -40,13 +42,9 @@ function BlogComponent({ blog }) {
           <div className='blogCompo'>
 
                <Modal isOpen={modalIsOpen}>
-
                     <img className='closeBtnModal' onClick={closeModal} src={CloseBtn} alt="" />
-
                     <div className='blogModalContent'>
-
                          <img className='blogModalimg' src={blog.photo} alt="" />
-
                          <div>
                               <div>
                                    <p className='blogsPageCompCategory'>in<span> {blog.domaine}</span></p>
@@ -58,13 +56,12 @@ function BlogComponent({ blog }) {
                                    {cookies.get('i18next') === 'ar' ? parse(`${blog.text__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${blog.text__fr}`) : parse(`${blog.text__en}`))}
                               </p>
                          </div>
-
                     </div>
                </Modal>
 
                <img src={blog.photo} alt="" onClick={openModal} />
                <div>
-                    <p className='blogCompoTitle'>{cookies.get('i18next') === 'ar' ? blog.title__ar : (cookies.get('i18next') == 'fr' ? blog.title__fr : blog.title__en)}</p>
+                    <p className='blogCompoTitle' style={textArabic} >{cookies.get('i18next') === 'ar' ? blog.title__ar : (cookies.get('i18next') == 'fr' ? blog.title__fr : blog.title__en)}</p>
                     <div>
                          <div><img src={pen} alt="" /><span>Admin</span> </div>
                          <div><img src={clock} alt="" /><span>{moment(blog.updated_at).format('DD/MM/YYYY')} </span> </div>

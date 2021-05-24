@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Slider from "react-slick"
-
+import { useTranslation } from 'react-i18next'
 import axios from 'axios'
 import TeamMemberCard from './TeamMemberCard'
 import { MEMBERS } from '../../sevices/globalServices'
@@ -9,7 +9,7 @@ import lineGreenish from '../../assets/img/Vector 5.svg'
 import spinner from '../../assets/img/spinner.svg'
 
 function Teams() {
-
+     const { t } = useTranslation()
      const [teams, setTeams] = useState([])
 
      useEffect(() => {
@@ -50,10 +50,10 @@ function Teams() {
      return (
           <div className='teamsContainer'>
                <div className='MainTitle'>
-                    <p className='MainTitle0'>• MEMBERS •</p>
-                    <h1 className='MainTitle1' >Meet The Team</h1>
+                    <p className='MainTitle0'>• {t('TEAMS_SEC_TAG')} •</p>
+                    <h1 className='MainTitle1' >{t('TEAMS_SEC_TITLE')}</h1>
                     <img src={lineGreenish} alt="" />
-                    <p className='MainTitle0wwo'>Prnare sem molestie. Sed suscipit sollicitudin nulla tempor congue. Integer sed elementum odio.</p>
+                    <p className='MainTitle0wwo'>{t('TEAMS_SEC_DESC')}</p>
                </div>
 
                <div>

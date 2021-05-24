@@ -9,7 +9,7 @@ import { PRODUCTS_LIMIT, PRODUCTS_CA_LIMIT } from '../../sevices/globalServices'
 import lineGreenish from '../../assets/img/Vector 5.svg'
 import spinner from '../../assets/img/spinner.svg'
 import { Tabs } from "@feuer/react-tabs";
-
+import cookies from 'js-cookie'
 
 
 function ProductsSection() {
@@ -38,8 +38,8 @@ function ProductsSection() {
           <div className='productsSectionContainer'>
 
                <div className='MainTitle'>
-                    <p className='MainTitle0'>• DISCOVER •</p>
-                    <h1 className='MainTitle1'  >Fresh & Organic Products</h1>
+                    <p className='MainTitle0'>• {t('P_SEC_TAG')} •</p>
+                    <h1 className='MainTitle1'  >{t('P_SEC_TITLE')}</h1>
                     <img src={lineGreenish} alt="" />
                </div>
 
@@ -48,14 +48,14 @@ function ProductsSection() {
 
                     <Tabs activeTab={{ id: "All" }} tabsProps={{ style: { textAlign: "center", } }} >
 
-                         <Tabs.Tab id='All' title="All" >
+                         <Tabs.Tab id='All' title={cookies.get('i18next') === 'ar' ? 'كل المنتجات' : (cookies.get('i18next') == 'fr' ? "Tout" : "َAll")} >
                               <div className='ProductsGrid' >
                                    {productsLimit.map(p => <Product product={p} />)}
                               </div>
                          </Tabs.Tab>
 
                          {
-                              products_CA_Limit.map(c => <Tabs.Tab id={c.id} title={c.name__en}>
+                              products_CA_Limit.map(c => <Tabs.Tab id={c.id} title={cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}>
                                    <div className='ProductsGrid'>
                                         {productsLimit.map(p => p.product_categories_id === c.id ? <Product product={p} /> : null)}
                                    </div>
@@ -67,7 +67,7 @@ function ProductsSection() {
                </div>
 
                <div className='ProductsSection_cta'>
-                    <Link to='/products'>All products »</Link>
+                    <Link to='/products'>{t('P_SEC_Link')} »</Link>
                </div>
 
           </div>
