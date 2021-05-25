@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 
 
 function Footer() {
-
+     const { t } = useTranslation()
      const [companiesInfo, setCompaniesInfo] = useContext(MyContext)
      const [productsCateg, setProductsCateg] = useState([])
 
@@ -94,18 +94,25 @@ function Footer() {
 
      }
 
+     const textArabic = {
+          textAlign: (cookies.get('i18next') === 'ar') ? "right" : "left",
+          marginRight: (cookies.get('i18next') === 'ar') ? '16px' : 'inherit',
+          fontSize: (cookies.get('i18next') === 'ar') ? '16px' : 'inherit',
+          letterSpacing: (cookies.get('i18next') === 'ar') ? '0px' : 'inherit'
+     }
+
      return (
           <div className='Footer01'>
                <div className="footer_row01">
                     <div className='footer_callus'>
                          <img src={headset} alt="" />
                          <div>
-                              <p className='title'>CALL US 24/7</p>
+                              <p className='title' style={textArabic} > {t('FOOTER_CALLUS')}  </p>
                               <p className='number'>{companiesInfo.phone}</p>
                          </div>
                     </div>
                     <div className="footer_sm">
-                         <p>FOLLOW US</p>
+                         <p style={textArabic} > {t('FOOTER_followUS')}</p>
                          <div>
                               <a href={companiesInfo.facebook}><img src={fcb} alt="" /></a>
                               <a href={companiesInfo.email}><img src={gmail} alt="" /></a>
@@ -117,7 +124,7 @@ function Footer() {
 
                <div className='footer_row02 '>
                     <div className='footer_sec footer_sec01'>
-                         <p>STORE LOCATION</p>
+                         <p style={textArabic}> {t('FOOTER_storeLocation')}</p>
                          <ul>
                               <li>{cookies.get('i18next') === 'ar' ? companiesInfo.address__ar : (cookies.get('i18next') == 'fr' ? companiesInfo.address__fr : companiesInfo.address__en)} </li>
                               <li><p></p></li>
@@ -125,29 +132,28 @@ function Footer() {
                          </ul>
                     </div>
 
-                    <div className='footer_sec'>
-                         <p>INFORMATION</p>
+                    <div className='footer_sec' >
+                         <p style={textArabic}> {t('FOOTER_information')}</p>
                          <ul>
-                              <li><a href="">About us</a></li>
-                              <li><a href="">Blog</a></li>
-                              <li><a href="">Contact</a></li>
-                              <li><a href="">Service</a></li>
+                              <li><Link to='/products' >{t('NAV_PRODUCTS')}</Link></li>
+                              <li><Link to='/about-us' >{t('NAV_ABOUT')}</Link></li>
+                              <li><Link to='/blogs' >{t('NAV_BLOG')}</Link></li>
+                              <li> <Link to='/faqs' >{t('NAV_FAQS')}</Link></li>
+                              <li> <Link to='/contact' >{t('NAV_CONTACT')}</Link></li>
                          </ul>
                     </div>
 
                     <div className='footer_sec'>
-                         <p>CATEGORIES</p>
+                         <p style={textArabic}> {t('FOOTER_categories')}</p>
                          <ul>
                               {productsCateg.map(c => <li> <Link>{cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}</Link> </li>)}
-
-
                          </ul>
                     </div>
 
                     <div className='footer_sec'>
-                         <p>SUBSCRIBE US</p>
+                         <p style={textArabic}> {t('FOOTER_subscribeUs')}</p>
 
-                         <p className='footer_subscribe_txt'>Sign up and get all our exclusive news.</p>
+                         <p className='footer_subscribe_txt' style={textArabic}> {t('FOOTER_subscribeTxt')}</p>
                          <form onSubmit={handleSubmit}>
                               <input
                                    value={email}
@@ -155,18 +161,17 @@ function Footer() {
                                    type="email"
                                    name='email'
                                    required
-                                   placeholder='Email address...'
+                                   placeholder={t('FOOTER_formInput')}
                               />
                               <button type="submit"> → </button>
                               <br />
                               <div className='errorStyle'>{formErrors.emailErr}</div>
-
                          </form>
                     </div>
                </div>
 
                <div className="footer_row03">
-                    <p>Copyright © 2021 <a href="">Light Services</a>. All Rights Reserved.</p>
+                    <p> {t('FOOTER_copyRight')} <a href="">Light Services</a> {t('FOOTER_copyRight_2')}</p>
                </div>
           </div>
      )

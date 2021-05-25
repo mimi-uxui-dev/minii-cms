@@ -148,18 +148,11 @@ const Contact = ({ lang }) => {
                <Header pageTitle={'Contact Us'} pageCrumb={'Contact Us'} bg={headerbg} />
 
                <div className="constactContainer" >
-
-
                     <div className="contactContainer_sideIMG">
                          <img src={contact1} alt="" style={{ width: '100%' }} />
                     </div>
 
-
                     <div className='contactContainerTxt' >
-
-                         {/* <p className='contactHeader'> {t('CONTACT_get_in_touch')} </p>
-                              <p className='contactHeaderTxt'> {t('CONTACT_get_in_touch_para')} </p> */}
-
 
                          <WeLoveToHearFromYou companiesInfo={companiesInfo} />
 
@@ -168,7 +161,7 @@ const Contact = ({ lang }) => {
                          <form className='contactForm' onSubmit={handleSubmit}>
 
                               <div className="contactFormInnerContainer">
-                                   <h3>Leave A Message</h3>
+                                   <h3> {t('CONTACT_LeaveAMsg')} </h3>
                                    <div className='formInputs'>
 
                                         <div>

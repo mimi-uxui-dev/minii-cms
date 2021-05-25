@@ -1835,6 +1835,22 @@ span.Collapsible__trigger.is-open::before {
   }
 }
 
+[dir="rtl"] .footer_row02 .footer_sec form input {
+  border-radius: 0 50px 50px 0;
+  padding: 0 16px 0 0;
+}
+
+[dir="rtl"] .footer_row02 .footer_sec form button {
+  border-radius: 0 50px 50px 0;
+  content: "456";
+  transform: rotate(-180deg);
+}
+
+[dir="rtl"] .footer_row02 .footer_sec {
+  text-align: right;
+  letter-spacing: 0px;
+}
+
 .footer_row02 {
   padding: 32px 0;
 
@@ -2031,8 +2047,7 @@ span.Collapsible__trigger.is-open::before {
     grid-template-columns: 1fr 1fr;
 
     .BlogSectionTitle {
-      height: 128px;
-      width: 460px;
+      width: 500px;
       font-style: normal;
       font-weight: normal;
       font-size: 58px;
@@ -2833,12 +2848,113 @@ span.Collapsible__trigger.is-open::before {
   }
 }
 
+[dir="rtl"] .header_container div {
+  width: 100%;
+}
+
+[dir="rtl"] .AU_container {
+  div {
+    margin-right: 32px;
+    h4,
+    h3,
+    p {
+      text-align: right;
+    }
+  }
+}
+
+[dir="rtl"] .blogsPageMainCompoTxt {
+  text-align: right !important;
+  margin-left: 0 !important;
+  margin-right: 24px;
+
+  * {
+    text-align: right;
+  }
+}
+
+[dir="rtl"] .blogsPageCompContainer {
+  * {
+    text-align: right !important;
+    margin-right: 8px;
+  }
+}
+
+[dir="rtl"] .blogModalContent {
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .blogsPageMainCompo {
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .WLTHFY_container_A {
+  text-align: right !important;
+  margin-right: 4px;
+
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .contactFormInnerContainer {
+  h3 {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .WLTHFY_container_B_sec1 {
+  text-align: right !important;
+  margin-right: 4px;
+
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .faqsHeader {
+  text-align: right !important;
+  margin-right: 4px;
+
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .faqsGrid {
+  * {
+    text-align: right !important;
+    margin-right: 4px;
+  }
+}
+
+[dir="rtl"] .AU_Container02 {
+  background-position: 48% 5%;
+}
+
+[dir="rtl"] .Au_01 {
+  * {
+    text-align: right !important;
+    margin-right: 16px;
+  }
+}
+
 .header_container {
   div {
     position: relative;
     top: 7em;
     left: 20em;
-    width: fit-content;
+    width: max-content;
     h1 {
       font-family: "Poppins-Bold";
       font-weight: bold;
