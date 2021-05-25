@@ -1,43 +1,80 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
-
 import fcb from '../assets/img/icons/FacebookLogo.svg'
 import ig from '../assets/img/icons/InstagramLogo.svg'
 import tw from '../assets/img/icons/TwitterLogo.svg'
-
 import logo from '../assets/img/Navbar/L2.svg'
-
 import search from '../assets/img/Navbar/bigMenu.svg'
 import Translate from '../assets/img/Translate.svg'
-
 import { useTranslation } from 'react-i18next'
 import i18nex from 'i18next'
-
+import { PRODUCTS } from '../sevices/globalServices'
 import { MyContextProvider, MyContext } from '../context/MyContext'
+import Modal from 'react-modal'
+import CloseBtn from '../assets/img/Products/XCircle.svg'
 
 function Navbar({ languages }) {
      const { t } = useTranslation()
 
      const [companiesInfo, setCompaniesInfo] = useContext(MyContext)
      const [openMenu, setOpenMenu] = useState(false)
+     const [searchTerm, setSearchTerm] = useState('')
+     const [products, setProducts] = useState([])
+     const [modalIsOpen, setIsOpen] = useState(false);
+     const [searchContent, setSearchContent] = useState([])
 
+     function openModal() {
+          setIsOpen(true);
+     }
+     function closeModal() {
+          setIsOpen(false);
+     }
      const toggleOpen = () => {
           setOpenMenu(!openMenu)
      }
 
+     useEffect(async () => {
+          const fetchData = async () => {
+               const result = await axios.get(PRODUCTS())
+                    .then(res => setProducts(res.data.data))
+          }
+          fetchData()
+     }, [])
+
+     /*      const searchProducts = (e) => {
+               setIsOpen(true)
+               e.preventDefault()
+               products.filter(p => {
+                    if (searchTerm == "") {
+                         return "Please Enter a Value"
+                    } else if (p.name__en.toLowerCase().includes(searchTerm.toLowerCase())) {
+                         return p
+                    }
+               }).map(p => {
+     
+                    console.log('Searchhhh content', p.name__en)
+               })
+     
+          } */
+
      return (
           <>
                <div className='myNavBarContainer'>
+
+
                     <div className='myNavBar'>
 
                          <div className='nav_navigation'>
-
-                              <form className='nav_navigation_search' >
+                              <form className='nav_navigation_search'  >
                                    <img src={search} alt="" />
-                                   <input type="text" placeholder={t('SEARCH_BTN_PLACEHOLDER')} />
+                                   <input
+                                        type="text"
+                                        onChange={e => setSearchTerm(e.target.value)}
+                                        placeholder={t('SEARCH_BTN_PLACEHOLDER')}
+                                   />
                                    <button type="submit"> {t('SEARCH_BTN_LABEL')} </button>
                               </form>
-
                          </div>
 
                          <div className='logoContainer'>

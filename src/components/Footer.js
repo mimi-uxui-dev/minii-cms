@@ -45,8 +45,7 @@ function Footer() {
 
           const fetchData = async () => {
                const result = await axios.get(PRODUCTS_CA())
-                    .then(res => setCompaniesInfo(res.data.data))
-
+                    .then(res => setProductsCateg(res.data.data))
           }
           fetchData()
 

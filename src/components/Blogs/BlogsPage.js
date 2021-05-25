@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import BlogsPageComponent from './BlogsPageComponent'
-import pc from '../../assets/img/Blogs/pc.png'
+
 import pen from '../../assets/img/Blogs/Pen.svg'
 import clock from '../../assets/img/Blogs/Clock.svg'
 import Header from '../Header'
