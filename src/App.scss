@@ -3288,6 +3288,25 @@ span.Collapsible__trigger.is-open::before {
     position: absolute;
     top: 40%;
     left: 20em;
+
+    p {
+      width: 55%;
+      margin-bottom: 40px;
+    }
+
+    a {
+      background-color: $base-color;
+      color: white;
+      margin: 24px;
+      padding: 16px 24px;
+      border-radius: 25px;
+
+      &:hover {
+        transition: ease 0.3s;
+        text-decoration: none;
+        background-color: $oliveGreen;
+      }
+    }
   }
 }
 
