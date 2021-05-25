@@ -22,7 +22,7 @@ function ProductsC({ data }) {
                <div className='PP_grid'>
                     {
                          data.length == 0 ?
-                              <img src={spinner} alt="" /> :
+                              <img src={spinner} className='spinner' alt="" /> :
                               data.map(p => p.product_categories_id === parseInt(category_id) ? <Product product={p} /> : null)
                     }
                </div>

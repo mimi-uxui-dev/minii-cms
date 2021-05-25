@@ -15,15 +15,15 @@ function TeamMemberCard({ team }) {
                <p className="TeamMemberDesc"> {cookies.get('i18next') === 'ar' ? parse(`${team.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${team.description__fr}`) : parse(`${team.description__en}`))}   </p>
 
                <div className="teamMemberSM">
-                    <a href={team.facebook}>
+                    <a href={team.facebook} target='_blank'>
                          <img src={fb} alt="" />
                     </a>
 
-                    <a href={team.instagram}>
+                    <a href={team.instagram} target='_blank'>
                          <img src={ig} alt="" />
                     </a>
 
-                    <a href={team.twitter}>
+                    <a href={team.twitter} target='_blank'>
                          <img src={tw} alt="" />
                     </a>
                </div>

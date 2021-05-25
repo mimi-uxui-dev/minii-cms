@@ -113,10 +113,10 @@ function Footer() {
                     <div className="footer_sm">
                          <p style={textArabic} > {t('FOOTER_followUS')}</p>
                          <div>
-                              <a href={companiesInfo.facebook}><img src={fcb} alt="" /></a>
-                              <a href={companiesInfo.email}><img src={gmail} alt="" /></a>
-                              <a href={companiesInfo.instagram}><img src={ig} alt="" /></a>
-                              <a href={companiesInfo.twitter}><img src={tw} alt="" /></a>
+                              <a href={companiesInfo.facebook} target='_blank' ><img src={fcb} alt="" /></a>
+                              <a href={companiesInfo.email} target='_blank'><img src={gmail} alt="" /></a>
+                              <a href={companiesInfo.instagram} target='_blank'><img src={ig} alt="" /></a>
+                              <a href={companiesInfo.twitter} target='_blank'><img src={tw} alt="" /></a>
                          </div>
                     </div>
                </div>

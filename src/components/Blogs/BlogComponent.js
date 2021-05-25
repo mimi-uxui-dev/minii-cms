@@ -61,7 +61,7 @@ function BlogComponent({ blog }) {
 
                <img src={blog.photo} alt="" onClick={openModal} />
                <div>
-                    <p className='blogCompoTitle' style={textArabic} >{cookies.get('i18next') === 'ar' ? blog.title__ar : (cookies.get('i18next') == 'fr' ? blog.title__fr : blog.title__en)}</p>
+                    <p className='blogCompoTitle' onClick={openModal} style={textArabic} >{cookies.get('i18next') === 'ar' ? blog.title__ar : (cookies.get('i18next') == 'fr' ? blog.title__fr : blog.title__en)}</p>
                     <div>
                          <div><img src={pen} alt="" /><span>Admin</span> </div>
                          <div><img src={clock} alt="" /><span>{moment(blog.updated_at).format('DD/MM/YYYY')} </span> </div>

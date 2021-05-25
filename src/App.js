@@ -23,6 +23,8 @@ import ProductCategories from './components/Products/ProductCategories'
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
 import FaqsPage from './components/Faqs/FaqsPage'
+import FourZeroFour from './components/FourZeroFour'
+
 
 function App() {
   const { t } = useTranslation()
@@ -76,6 +78,10 @@ function App() {
               <Route path="/contact" component={Contact} />
               <Route path="/about-us" component={AboutUs} />
               <Route path="/faqs" component={FaqsPage} />
+              <Route path="*" component={FourZeroFour} />
+
+
+
             </Switch>
 
             <ToastContainer />

@@ -58,7 +58,7 @@ function Partners() {
                <div className='partenersSlide'>
                     <Slider {...settings}>
                          {
-                              partners.length == 0 ? <img src={spinner} alt="" /> : partners.map(p => <div key={p.id} className='PartnersCard'>
+                              partners.length == 0 ? <img className='spinner' src={spinner} alt="" /> : partners.map(p => <div key={p.id} className='PartnersCard'>
                                    <img src={p.photo} alt="" />
                               </div>)
                          }

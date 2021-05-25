@@ -9,7 +9,7 @@ function ProductsAll({ data }) {
           <div className='PP_grid_container'>
 
                <div className='PP_grid'>
-                    {data.length === 0 ? <img src={spinner} alt="" /> : data.map(p => <Product product={p} />)}
+                    {data.length === 0 ? <img className='spinner' src={spinner} alt="" /> : data.map(p => <Product product={p} />)}
                </div>
           </div>
      )
