@@ -43,27 +43,27 @@ const Contact = ({ lang }) => {
 
           // Name Errors
           if (name.length < 3 || !name) {
-               nameErr = 'Invalid Name'
+               nameErr = cookies.get('i18next') === 'ar' ? "اسم غير صالح: أكثر من 3 أحرف من فضلك" : (cookies.get('i18next') == 'fr' ? "Nom invalide: plus de 3 caractères s'il vous plaît" : "Name Invalid: more than 3 characters please")
           }
 
           // Email Errors
           if (!email.includes('@')) {
-               emailErr = 'Invalid Email'
+               emailErr = cookies.get('i18next') === 'ar' ? "البريد الإلكتروني غير صحيح" : (cookies.get('i18next') == 'fr' ? "Email invalide" : "Email Invalid")
           }
 
           // Phone Errors
           if (phone.length < 10) {
-               phoneErr = 'Invalid Phone: 10 or more characters'
+               phoneErr = cookies.get('i18next') === 'ar' ? "رقم الهاتف غير صالح: 10 أحرف أو أكثر" : (cookies.get('i18next') == 'fr' ? "Téléphone non valide: 10 caractères ou plus" : 'Invalid Phone: 10 or more characters')
           }
 
           // Subject Errors
           if (subject.length < 10) {
-               subjectErr = 'Invalid Subject: 10 or more characters'
+               subjectErr = cookies.get('i18next') === 'ar' ? "10 أو أكثر من الأحرف" : (cookies.get('i18next') == 'fr' ? "10 caractères ou plus" : '10 or more characters')
           }
 
           // Message Errors
           if (message.length < 144) {
-               messageErr = 'Invalid Message: 144 or more characters'
+               messageErr = cookies.get('i18next') === 'ar' ? "144 حرفًا أو أكثر" : (cookies.get('i18next') == 'fr' ? "144 caractères ou plus" : '144 or more characters')
           }
 
 
@@ -112,18 +112,20 @@ const Contact = ({ lang }) => {
 
                console.log('dataToSubmit', dataToSubmit)
 
+               toast(t('TOASTER_CONTACT_msgIsBeingSent'), {
+                    position: toast.POSITION.TOP_CENTER
+               });
+
                const response = await axios.post(CONTACT_POST(), dataToSubmit)
-               //.then(res => console.log('res from handleSubmit Contact', res))
-               //.catch(error => console.log('err from handleSubmit Contact ', error.response))
 
                console.log('response :: ', response)
 
                if (response.status === 200) {
-                    toast("Message sent with success ✔", {
+                    toast(t('TOASTER_CONTACT_success'), {
                          position: toast.POSITION.TOP_CENTER
                     });
                } else {
-                    toast.error("Sending message failed ❌", {
+                    toast.error(t('TOASTER_CONTACT_failure'), {
                          position: toast.POSITION.TOP_CENTER
                     });
                }
@@ -137,8 +139,6 @@ const Contact = ({ lang }) => {
                     messageErr: ''
                })
           }
-
-
 
      }
 

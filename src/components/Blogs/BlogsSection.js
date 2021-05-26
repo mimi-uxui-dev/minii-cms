@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { BLOG_LIMIT } from '../../sevices/globalServices'
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
+
 function BlogsSection() {
      const { t } = useTranslation()
 

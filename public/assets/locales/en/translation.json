@@ -77,5 +77,12 @@
      "CONTACT_businessHours": "OUR BUSINESS HOURS",
      "CONTACT_monday_friday": "Monday - Friday",
      "CONTACT_saturday_sunday": "Saturday, Sunday",
-     "CONTACT_LeaveAMsg": "Leave A Message"
+     "CONTACT_LeaveAMsg": "Leave A Message",
+     "404_oops": "OOPS!",
+     "404_desc": "The page you are looking for might have been removed, had its name changes, or is temporarily unavailable.",
+     "404_getBackHome": "Get Back Home",
+     "404_contactUs": "Contact Us",
+     "TOASTER_CONTACT_success": "Message sent with success ✔",
+     "TOASTER_CONTACT_failure": "Sending message failed ❌ .. Please try in a few seconds 😊",
+     "TOASTER_CONTACT_msgIsBeingSent": "Your message is being sent 😊"
 }
