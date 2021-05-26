@@ -145,7 +145,7 @@ function Footer() {
                     <div className='footer_sec'>
                          <p style={textArabic}> {t('FOOTER_categories')}</p>
                          <ul>
-                              {productsCateg.map(c => <li> <Link>{cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}</Link> </li>)}
+                              {productsCateg.map(c => <li key={c.id}>  <Link to={'/'} >{cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}</Link> </li>)}
                          </ul>
                     </div>
 

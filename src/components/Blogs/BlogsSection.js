@@ -22,8 +22,6 @@ function BlogsSection() {
           fetchData()
      }, [])
 
-     console.log('Limited Blogs', blogs)
-
      return (
           <div className='blogSectionContainer'>
                <div className='blogSectionInnerContainer'>

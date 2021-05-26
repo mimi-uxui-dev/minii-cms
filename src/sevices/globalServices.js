@@ -30,7 +30,7 @@ export const PRODUCT = (id) => `${ROOT}/products/${id}` // GET + id
 
 
 // ProductsCategories
-export const PRODUCTS_CA_LIMIT = () => `${ROOT}/productcategories_limit` // GET ALL
+export const PRODUCTS_CA_LIMIT = () => `${ROOT}/productcategories/limit/10` // GET ALL
 export const PRODUCTS_CA = () => `${ROOT}/productcategories` // GET ALL
 export const PRODUCT_CA = (id) => `${ROOT}/productcategories/${id}` // GET + id
 

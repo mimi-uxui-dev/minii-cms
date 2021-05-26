@@ -1369,6 +1369,7 @@ span.Collapsible__trigger.is-open::before {
   height: fit-content;
   margin: auto auto;
   max-width: 80%;
+  width: fit-content;
 }
 
 .model_pr_detail {
@@ -1548,15 +1549,30 @@ span.Collapsible__trigger.is-open::before {
 
 .section {
   width: 100%;
-  height: 540px;
+  height: 100%;
+  /*  height: 540px; */
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.sectionBG {
 }
 
 .sliderTxt {
   width: 480px;
   position: absolute;
   color: white;
-  top: 24%;
+  top: 0;
   margin-left: 15em;
+  height: -webkit-fill-available;
+  padding: 10em 0 0 5em;
+  left: 0 !important;
+  margin: 0 0 0 10em;
+
+  background-color: rgba(121, 121, 121, 0.2);
+  backdrop-filter: blur(16px);
+  /* background: rgba(4, 5, 8, 0.2); */
 
   .sliderCTA {
     background: $white;

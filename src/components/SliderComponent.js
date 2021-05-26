@@ -16,7 +16,7 @@ function SliderComponent() {
           dots: false,
           autoplay: true,
           infinite: true,
-          autoplaySpeed: 12000,
+          autoplaySpeed: 50000,
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: true
@@ -49,6 +49,8 @@ function SliderComponent() {
                               {
                                    sliders.map(slider =>
                                         <div key={slider.id} className="section">
+
+
                                              <img src={slider.photo} alt="" style={{ width: '100%', objectFit: 'cover' }} />
 
                                              <div className='sliderTxt'>
@@ -57,6 +59,7 @@ function SliderComponent() {
                                                   <p className="sliderContent" style={textArabic} dangerouslySetInnerHTML={{ __html: cookies.get('i18next') === 'ar' ? slider.description__ar : (cookies.get('i18next') == 'fr' ? slider.description__fr : slider.description__en) }} ></p>
                                                   <Link className='sliderCTA' to={'/products'}>Shop now »</Link>
                                              </div>
+
                                         </div>
                                    )
                               }

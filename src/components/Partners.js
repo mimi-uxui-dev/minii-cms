@@ -49,8 +49,6 @@ function Partners() {
           ]
      };
 
-     console.log(partners)
-
      return (
           <div id='partnersCotainer'>
                <div className='partnersCotainerLine'></div>

@@ -1,16 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react'
-
 import { useTranslation } from 'react-i18next'
 import Product from './Product'
 import axios from 'axios'
-
 import { Route, Switch, Link } from 'react-router-dom'
 import { PRODUCTS_LIMIT, PRODUCTS_CA_LIMIT } from '../../sevices/globalServices'
 import lineGreenish from '../../assets/img/Vector 5.svg'
 import spinner from '../../assets/img/spinner.svg'
 import { Tabs } from "@feuer/react-tabs";
 import cookies from 'js-cookie'
-
 
 function ProductsSection() {
      const { t } = useTranslation()
@@ -43,21 +40,20 @@ function ProductsSection() {
                     <img src={lineGreenish} alt="" />
                </div>
 
-
                <div className='TabsProducts_container'>
 
                     <Tabs activeTab={{ id: "All" }} tabsProps={{ style: { textAlign: "center", } }} >
 
                          <Tabs.Tab id='All' title={cookies.get('i18next') === 'ar' ? 'كل المنتجات' : (cookies.get('i18next') == 'fr' ? "Tout" : "َAll")} >
                               <div className='ProductsGrid' >
-                                   {productsLimit.map(p => <Product product={p} />)}
+                                   {productsLimit.map(p => <Product key={p.id} product={p} />)}
                               </div>
                          </Tabs.Tab>
 
                          {
                               products_CA_Limit.map(c => <Tabs.Tab id={c.id} title={cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)}>
                                    <div className='ProductsGrid'>
-                                        {productsLimit.map(p => p.product_categories_id === c.id ? <Product product={p} /> : null)}
+                                        {productsLimit.map(p => p.product_categories_id === c.id ? <Product key={p.id} product={p} /> : null)}
                                    </div>
                               </Tabs.Tab>)
                          }
@@ -73,5 +69,6 @@ function ProductsSection() {
           </div>
      )
 }
+
 
 export default ProductsSection

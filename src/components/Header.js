@@ -12,7 +12,6 @@ function Header(props) {
           backgroundPosition: 'center',
      };
 
-
      return (
           <div className='header_container' style={sectionStyle}>
                <div>
