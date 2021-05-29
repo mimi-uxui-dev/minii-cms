@@ -139,8 +139,10 @@ function Product({ product }) {
                               <p className='modelContentTXT_title'>{cookies.get('i18next') === 'ar' ? product.name__ar : (cookies.get('i18next') == 'fr' ? product.name__fr : product.name__en)}</p>
                               <p className='modelContentTXT_para'>{cookies.get('i18next') === 'ar' ? parse(`${product.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${product.description__fr}`) : parse(`${product.description__en}`))}</p>
                               <div className='modelContentTXT_avail'> {product.availability ? null : <div> <img src={sadFace} alt="" /> Out of Stock </div>} </div>
+                              {/* 
+                              
                               <hr />
-                              {/* <p className='modelContentTXT_cate'>
+                              <p className='modelContentTXT_cate'>
                                    <span>Categories:</span> {
                                         categories.length === 0 ? 'Loading..' : categories.map(c => (product.product_categories_id === c.id ? <Link to={`/products/${c.id}`}>
                                              {cookies.get('i18next') === 'ar' ? c.name__ar : (cookies.get('i18next') == 'fr' ? c.name__fr : c.name__en)} </Link> : 'no'))

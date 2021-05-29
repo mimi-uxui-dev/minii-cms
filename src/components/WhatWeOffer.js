@@ -41,7 +41,7 @@ function WhatWeOffer({ lang }) {
                               services.map(s => <div key={s.id} className='wwo2Grid_'>
                                     <img className='wwo2Grid_Img' src={s.photo} alt="" />
                                     <p className='wwo2Grid_title'>{cookies.get('i18next') === 'ar' ? s.name__ar : (cookies.get('i18next') == 'fr' ? s.name__fr : s.name__en)}</p>
-                                    <img src={lineGreenish} alt="" />
+                                    <img className='wwo2Grid_line' src={lineGreenish} alt="" />
                                     <p className='wwo2Grid_desc'> {cookies.get('i18next') === 'ar' ? parse(`${s.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${s.description__fr}`) : parse(`${s.description__en}`))}  </p>
                               </div>)
                         }

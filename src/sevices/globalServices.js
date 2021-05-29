@@ -50,8 +50,8 @@ export const TEAM = (id) => `${ROOT}/teams/${id}` // GET + id
 export const BLOGS = () => `${ROOT}/blogs` // GET ALL
 export const BLOG = (id) => `${ROOT}/blogs/${id}` // GET + id
 export const BLOG_LIMIT = (id) => `${ROOT}/blogs/limit/4`
-export const BLOG_LAST = (id) => `${ROOT}/blogs_last`
-export const BLOG_EXCEPT = (id) => `${ROOT}/blogs_except`
+export const BLOG_LAST = (id) => `${ROOT}/blogs/last`
+export const BLOG_EXCEPT = (id) => `${ROOT}/blogs/except`
 
 
 // Members

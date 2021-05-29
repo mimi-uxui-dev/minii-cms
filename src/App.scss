@@ -1107,6 +1107,7 @@ p {
     height: 125px;
     border-radius: 100%;
     box-shadow: 0px 2px 10px rgba(117, 117, 117, 0.15);
+    object-fit: cover;
   }
   .TeamMemberName {
     font-style: normal;
@@ -1560,15 +1561,13 @@ span.Collapsible__trigger.is-open::before {
 }
 
 .sliderTxt {
-  width: 480px;
+  width: 35%;
   position: absolute;
   color: white;
   top: 0;
-  margin-left: 15em;
   height: -webkit-fill-available;
-  padding: 10em 0 0 5em;
+  padding: 10em 0 0 4.1em;
   left: 0 !important;
-  margin: 0 0 0 10em;
 
   background-color: rgba(121, 121, 121, 0.2);
   backdrop-filter: blur(16px);
@@ -2627,6 +2626,10 @@ span.Collapsible__trigger.is-open::before {
     max-width: 440px;
     width: 340px;
 
+    .wwo2Grid_line {
+      width: 50px;
+    }
+
     .wwo2Grid_Img {
       width: 80px;
     }
@@ -3459,9 +3462,7 @@ span.Collapsible__trigger.is-open::before {
   .ci_inner_containerA .slick-slider.slick-initialized {
     max-width: 530px;
   }
-  .sliderTxt {
-    margin-left: 12em;
-  }
+
   .slick-prev {
     right: 14.5%;
   }
