@@ -38,7 +38,7 @@ function WhatWeOffer({ lang }) {
                   <div className='wwo2Grid' >
 
                         {
-                              services.map(s => <div className='wwo2Grid_'>
+                              services.map(s => <div key={s.id} className='wwo2Grid_'>
                                     <img className='wwo2Grid_Img' src={s.photo} alt="" />
                                     <p className='wwo2Grid_title'>{cookies.get('i18next') === 'ar' ? s.name__ar : (cookies.get('i18next') == 'fr' ? s.name__fr : s.name__en)}</p>
                                     <img src={lineGreenish} alt="" />

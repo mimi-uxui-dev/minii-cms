@@ -27,7 +27,7 @@ function BlogsSection() {
                <div className='blogSectionInnerContainer'>
                     <p className='BlogSectionTitle' style={textArabic}> {t('BLOG_SEC_TITLE')} </p>
                     {
-                         blogs.map(blog => <BlogComponent blog={blog} />)
+                         blogs.map(blog => <BlogComponent key={blog.id} blog={blog} />)
                     }
                     <Link to='/blogs' className='blogSection_seeAllPosts'> {t('BLOG_SEC_Link')} </Link>
                </div>
