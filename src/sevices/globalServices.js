@@ -1,5 +1,5 @@
 // const ROOT = process.env.REACT_APP_API_URL
-export const ROOT = 'https://192.168.1.168:8000/api/v1'
+export const ROOT = 'http://192.168.1.168:8000/api/v1'
 // export const ROOT = 'https://light-cms.herokuapp.com/api/v1'
 
 // Companies
