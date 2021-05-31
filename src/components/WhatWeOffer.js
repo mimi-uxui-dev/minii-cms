@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import { useTranslation } from 'react-i18next'
 
-import { SERVICES } from '../sevices/globalServices'
+import { SERVICE_LIMIT } from '../sevices/globalServices'
 import cookies from 'js-cookie'
 import lineGreenish from '../assets/img/Vector 5.svg'
 
@@ -19,7 +19,7 @@ function WhatWeOffer({ lang }) {
 
       useEffect(async () => {
             const fetchData = async () => {
-                  const result = await axios.get(SERVICES())
+                  const result = await axios.get(SERVICE_LIMIT())
                         .then(res => setServices(res.data.data))
             }
             fetchData()
@@ -38,12 +38,13 @@ function WhatWeOffer({ lang }) {
                   <div className='wwo2Grid' >
 
                         {
-                              services.map(s => <div key={s.id} className='wwo2Grid_'>
-                                    <img className='wwo2Grid_Img' src={s.photo} alt="" />
-                                    <p className='wwo2Grid_title'>{cookies.get('i18next') === 'ar' ? s.name__ar : (cookies.get('i18next') == 'fr' ? s.name__fr : s.name__en)}</p>
-                                    <img className='wwo2Grid_line' src={lineGreenish} alt="" />
-                                    <p className='wwo2Grid_desc'> {cookies.get('i18next') === 'ar' ? parse(`${s.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${s.description__fr}`) : parse(`${s.description__en}`))}  </p>
-                              </div>)
+                              services.length == 0 ? 'loading ..' :
+                                    services.map(s => <div key={s.id} className='wwo2Grid_'>
+                                          <img className='wwo2Grid_Img' src={s.photo} alt="" />
+                                          <p className='wwo2Grid_title'>{cookies.get('i18next') === 'ar' ? s.name__ar : (cookies.get('i18next') == 'fr' ? s.name__fr : s.name__en)}</p>
+                                          <img className='wwo2Grid_line' src={lineGreenish} alt="" />
+                                          <p className='wwo2Grid_desc'> {cookies.get('i18next') === 'ar' ? parse(`${s.description__ar}`) : (cookies.get('i18next') == 'fr' ? parse(`${s.description__fr}`) : parse(`${s.description__en}`))}  </p>
+                                    </div>)
                         }
 
                         {/* <div className='wwo2Grid_'>

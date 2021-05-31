@@ -37,6 +37,7 @@ export const PRODUCT_CA = (id) => `${ROOT}/productcategories/${id}` // GET + id
 // Services
 export const SERVICES = () => `${ROOT}/services` // GET ALL
 export const SERVICE = (id) => `${ROOT}/services/${id}` // GET + id
+export const SERVICE_LIMIT = () => `${ROOT}/services/limit/6` // GET + id
 
 // Slider
 export const SLIDERS = () => `${ROOT}/sliders` // GET ALL
