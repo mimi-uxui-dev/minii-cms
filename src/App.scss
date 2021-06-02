@@ -1560,18 +1560,33 @@ span.Collapsible__trigger.is-open::before {
 .sectionBG {
 }
 
+.searchSelect {
+  margin-right: 8px;
+  border: none;
+  background: no-repeat;
+  border-bottom: 1px solid $oliveGreen;
+
+  option {
+    border: 1px solid red;
+  }
+}
+
 .sliderTxt {
   width: 35%;
   position: absolute;
   color: white;
   top: 0;
   height: -webkit-fill-available;
-  padding: 10em 0 0 4.1em;
+
   left: 0 !important;
 
   background-color: rgba(121, 121, 121, 0.2);
   backdrop-filter: blur(16px);
-  /* background: rgba(4, 5, 8, 0.2); */
+
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  flex-direction: column;
 
   .sliderCTA {
     background: $white;
@@ -1580,7 +1595,7 @@ span.Collapsible__trigger.is-open::before {
     border-radius: 50px;
     font-size: 12px;
     font-weight: bold;
-    position: absolute;
+    width: fit-content;
     margin-top: 24px;
 
     &:hover {

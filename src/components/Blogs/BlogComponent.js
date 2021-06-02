@@ -37,6 +37,7 @@ function BlogComponent({ blog }) {
      function closeModal() {
           setIsOpen(false);
      }
+
      return (
 
           <div className='blogCompo'>

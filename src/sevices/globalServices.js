@@ -61,3 +61,6 @@ export const MEMBER = (id) => `${ROOT}/members/${id}` // GET + id
 
 // Subscribes
 export const SUBSCRIBE = () => `${ROOT}/subscribes` // GET ALL
+
+// Search *POST* 
+export const SEARCH = () => `${ROOT}/search`

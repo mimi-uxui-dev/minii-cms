@@ -24,7 +24,7 @@ import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
 import FaqsPage from './components/Faqs/FaqsPage'
 import FourZeroFour from './components/FourZeroFour'
-
+import SearchPage from './components/SearchPage'
 
 function App() {
   const { t } = useTranslation()
@@ -70,17 +70,19 @@ function App() {
               <Route path="/" exact component={Home} />
 
               {/* <Route path="/products/:id" component={ProductDetails} /> */}
+
               <Route path="/products" component={ProductsPage} />
 
               <Route path="/blogs" component={BlogsPage} />
               <Route path="/blogs/:id" component={BlogDetails} />
 
+
               <Route path="/contact" component={Contact} />
               <Route path="/about-us" component={AboutUs} />
               <Route path="/faqs" component={FaqsPage} />
+
+              <Route path='/results' component={SearchPage} />
               <Route path="*" component={FourZeroFour} />
-
-
 
             </Switch>
 

@@ -7,7 +7,6 @@ import { PRODUCTS, PRODUCTS_CA } from '../../sevices/globalServices'
 import ProductsC from './ProductsC'
 import ProductsAll from './ProductsAll'
 
-
 function ProductsPage() {
 
      const [products, setProducts] = useState([])
@@ -28,7 +27,6 @@ function ProductsPage() {
           }
           fetchData()
      }, [])
-
 
 
      return (

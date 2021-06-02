@@ -32,7 +32,6 @@ function Footer() {
                emailErr = 'Invalid Email'
           }
 
-
           if (emailErr) {
                setformErrors({ emailErr })
                return false
