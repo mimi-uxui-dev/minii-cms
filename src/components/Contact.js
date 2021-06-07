@@ -62,10 +62,9 @@ const Contact = ({ lang }) => {
           }
 
           // Message Errors
-          if (message.length < 144) {
-               messageErr = cookies.get('i18next') === 'ar' ? "144 حرفًا أو أكثر" : (cookies.get('i18next') == 'fr' ? "144 caractères ou plus" : '144 or more characters')
+          if (message.length === 0) {
+               messageErr = cookies.get('i18next') === 'ar' ? "لايمكن ان يكون فارغا" : (cookies.get('i18next') == 'fr' ? "Le champ ne peut pas être vide" : 'Field cannot be empty')
           }
-
 
           if (emailErr || nameErr || phoneErr || subjectErr || messageErr) {
                setformErrors({ emailErr, nameErr, phoneErr, subjectErr, messageErr })
@@ -221,6 +220,7 @@ const Contact = ({ lang }) => {
                                              id='message'
                                              value={message}
                                              onChange={handleTxtarea}
+                                             maxLength="500"
 
                                         />
                                         <div className='errorStyle'>{formErrors.messageErr}</div>
