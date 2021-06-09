@@ -3364,7 +3364,11 @@ span.Collapsible__trigger.is-open::before {
 }
 
 .searchPage_grid {
+  margin-bottom: 3em;
+
   h1 {
+    text-align: center;
+    font-weight: 700;
   }
 
   .SearchPage_grid_card {

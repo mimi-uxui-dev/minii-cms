@@ -2,8 +2,9 @@ import React, { Component, useEffect, useState, } from 'react'
 import parse from 'html-react-parser'
 import axios from 'axios'
 import { SEARCH } from '../sevices/globalServices'
-// import { Pagination } from 'react-laravel-paginex'
 import Pagination from 'react-js-pagination'
+import { useTranslation } from 'react-i18next'
+import cookies from 'js-cookie'
 
 
 
@@ -30,22 +31,54 @@ class SearchPage extends Component {
           this.getData()
      }
 
-     renderList = () => {
 
+
+     renderList = () => {
           return (
                <ul className="list-group">
                     {
                          <React.Fragment>
-
                               <div className='searchPage_grid'>
                                    {
                                         Object.keys(this.state.data).length === 0 ?
                                              console.log('loading') :
                                              this.state.data.data.map(d => <div className="SearchPage_grid_card">
+
                                                   <img className='searchImg' src={d.photo} alt="" />
+
                                                   <div className='searchInfo'>
-                                                       <h4>{d.title__fr || d.name__fr}</h4>
-                                                       <p> {parse(`${d.text__fr || d.description__fr}`)} </p>
+
+                                                       <h4>
+                                                            <span>
+                                                                 {cookies.get('i18next') === 'ar' ? d.title__ar : (cookies.get('i18next') == 'fr' ? d.title__fr : d.title__en)}
+
+                                                            </span>
+
+                                                            <span>
+                                                                 {cookies.get('i18next') === 'ar' ? d.name__ar : (cookies.get('i18next') == 'fr' ? d.name__fr : d.name__en)}
+
+                                                            </span>
+
+                                                       </h4>
+
+                                                       <p>
+
+                                                            <span>
+                                                                 {
+
+                                                                      cookies.get('i18next') === 'ar' ? d.text__ar : (cookies.get('i18next') == 'fr' ? d.text__fr : d.text__en)
+                                                                 }
+                                                            </span>
+
+                                                            <span>
+                                                                 {
+                                                                      cookies.get('i18next') === 'ar' ? d.description__ar : (cookies.get('i18next') == 'fr' ? d.description__fr : d.description__en)
+                                                                 }
+                                                            </span>
+
+
+                                                       </p>
+
                                                   </div>
                                              </div>)
                                    }
