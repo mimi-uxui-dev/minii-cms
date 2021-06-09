@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 
 import { Route, Switch, Redirect } from "react-router-dom";
 
@@ -82,6 +82,8 @@ function App() {
               <Route path="/faqs" component={FaqsPage} />
 
               <Route path='/results' component={SearchPage} />
+
+
               <Route path="*" component={FourZeroFour} />
 
             </Switch>

@@ -4,48 +4,41 @@ import CloseBtn from '../assets/img/Products/XCircle.svg'
 import { useTranslation } from 'react-i18next'
 import Modal from 'react-modal'
 import { SEARCH } from '../sevices/globalServices'
-import { Redirect, withRouter, Link } from 'react-router-dom'
+import { Redirect, withRouter, Link, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { toast, ToastContainer } from 'react-toastify'
-
+import SearchPage from './SearchPage'
 
 
 function Search() {
      const { t } = useTranslation()
+     let history = useHistory();
 
      const [searchTerm, setSearchTerm] = useState('')
      const [selectedValue, setSelectedValue] = useState('')
      const [searchRes, setSearchRes] = useState([])
 
-     const fetchData = async () => {
-          const data = {
+     const handleSubmit = async e => {
+          e.preventDefault()
+
+          const form_data = {
                table: selectedValue,
                term: searchTerm
           }
-          const res = await axios.post(SEARCH(), data)
 
-          setSearchRes(res.data)
-
-
-     }
-
-     const handleSubmit = async (e) => {
-          e.preventDefault()
-
-          setTimeout(() => fetchData(), 2000)
+          // const res = await axios.post(SEARCH(), form_data).then(r => setSearchRes(r.data))
 
 
-          setSelectedValue('')
-          setSearchTerm('')
+          history.push('/results', form_data)
 
      }
-
 
      return (
 
           <>
 
                <form className='nav_navigation_search' onSubmit={handleSubmit} >
+
                     <img src={search} alt="" />
                     <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder={t('SEARCH_BTN_PLACEHOLDER')} required />
 
@@ -63,17 +56,7 @@ function Search() {
 
                     <button type="submit"> {t('SEARCH_BTN_LABEL')} </button>
 
-                    {
-                         searchRes.length > 0 && <Redirect to={{
-                              pathname: '/results',
-                              state: searchRes
-                         }} />
-                    }
-
-
                </form>
-
-
 
           </>
 
