@@ -3385,6 +3385,12 @@ span.Collapsible__trigger.is-open::before {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      &:hover {
+        color: $oliveGreen !important;
+        transition: ease 0.3s;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -3415,6 +3421,12 @@ span.Collapsible__trigger.is-open::before {
   margin-right: 32px;
   object-fit: cover;
   max-height: 200px;
+  transform: scale(0.95);
+  &:hover {
+    transform: scale(1);
+    transition: ease 0.3s;
+    cursor: pointer;
+  }
 }
 
 .pagination {

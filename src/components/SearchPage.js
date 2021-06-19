@@ -3,20 +3,32 @@ import parse from 'html-react-parser'
 import axios from 'axios'
 import { SEARCH } from '../sevices/globalServices'
 import Pagination from 'react-js-pagination'
-import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
+import Modal from 'react-modal';
+import CloseBtn from '../assets/img/Products/XCircle.svg'
 
+
+const customStyles = {
+     content: {
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+          bottom: 'auto',
+          marginRight: '-50%',
+          transform: 'translate(-50%, -50%)'
+
+     }
+};
 
 
 class SearchPage extends Component {
 
      state = {
-          data: {}
+          data: {},
+          modalIsOpen: false
      }
 
      form_data = this.props.location.state
-
-     // [data, setdata] = useState({})
 
      async getData(pageNumber = 1) {
           console.log('form data ', this.form_data)
@@ -25,6 +37,7 @@ class SearchPage extends Component {
 
           this.setState({ data: r.data })
 
+          console.log("---> ", this.state.data.data)
      }
 
      componentDidMount() {
@@ -32,10 +45,13 @@ class SearchPage extends Component {
      }
 
 
-
      renderList = () => {
           return (
                <ul className="list-group">
+                    <Modal isOpen={this.state.modalIsOpen}>
+                         <img className='closeBtnModal' onClick={() => this.setState({ modalIsOpen: false })} src={CloseBtn} alt="" />
+
+                    </Modal>
                     {
                          <React.Fragment>
                               <div className='searchPage_grid'>
@@ -44,19 +60,17 @@ class SearchPage extends Component {
                                              console.log('loading') :
                                              this.state.data.data.map(d => <div className="SearchPage_grid_card">
 
-                                                  <img className='searchImg' src={d.photo} alt="" />
+                                                  <img className='searchImg' onClick={() => this.setState({ modalIsOpen: true })} src={d.photo} alt="" />
 
-                                                  <div className='searchInfo'>
+                                                  <div className='searchInfo' onClick={() => this.setState({ modalIsOpen: true })} >
 
                                                        <h4>
                                                             <span>
                                                                  {cookies.get('i18next') === 'ar' ? d.title__ar : (cookies.get('i18next') == 'fr' ? d.title__fr : d.title__en)}
-
                                                             </span>
 
                                                             <span>
                                                                  {cookies.get('i18next') === 'ar' ? d.name__ar : (cookies.get('i18next') == 'fr' ? d.name__fr : d.name__en)}
-
                                                             </span>
 
                                                        </h4>
@@ -65,7 +79,6 @@ class SearchPage extends Component {
 
                                                             <span>
                                                                  {
-
                                                                       cookies.get('i18next') === 'ar' ? d.text__ar : (cookies.get('i18next') == 'fr' ? d.text__fr : d.text__en)
                                                                  }
                                                             </span>

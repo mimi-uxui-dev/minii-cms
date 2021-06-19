@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
 import CloseBtn from '../../assets/img/Products/XCircle.svg'
 import parse from 'html-react-parser'
-import { useTranslation } from 'react-i18next'
-
 import Modal from 'react-modal';
 import cookies from 'js-cookie'
 import moment from 'moment'
-
-import blogImg from '../../assets/img/Blogs/blogImg.svg'
 import pen from '../../assets/img/Blogs/Pen.svg'
 import clock from '../../assets/img/Blogs/Clock.svg'
-
 
 const customStyles = {
      content: {
